@@ -23,20 +23,11 @@ public class Client {
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
             display(in.readLine());
-            //System.out.println("1. " + in.readLine());
-            sending(out, "Kate");
-            /*out.write("Kate" + "\n");
-            out.flush();*/
+            sending(out, "Kate");         
             display(in.readLine());
-            //System.out.println("3. " + in.readLine());
             sending(out, "Woman");
-            /*out.write("Woman" + "\n");
-            out.flush();*/
             display(in.readLine());
-            //System.out.println("5. " + in.readLine());
             sending(out, "Ok, thanks!");
-            /*out.write("Ok, thanks!" + "\n");
-            out.flush();*/
         } catch (IOException ex){
             ex.printStackTrace();
         }
